@@ -12,10 +12,6 @@ let queueRequests = false;
 
 // Apply default configuration options to the Axios HTTP client.
 function applyAxiosDefaults(authenticatedAPIClient) {
-  /* eslint-disable no-param-reassign */
-  authenticatedAPIClient.defaults.withCredentials = true;
-  authenticatedAPIClient.defaults.headers.common['USE-JWT-COOKIE'] = true;
-  /* eslint-enable no-param-reassign */
 }
 
 // Apply auth-related interceptors to the Axios HTTP Client.
