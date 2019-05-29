@@ -63,6 +63,10 @@ export default function applyAuthInterface(httpClient, authConfig) {
   };
 
   httpClient.logout = (redirectUrl = authConfig.appBaseUrl) => {
+    // const cookies = new Cookies();
+    // cookies.remove(httpClient.accessTokenCookieName, {
+    //   domain: '.smartlearn.kr',
+    // });
     global.location.assign(`${httpClient.logoutUrl}?redirect_url=${encodeURIComponent(redirectUrl)}`);
   };
 
